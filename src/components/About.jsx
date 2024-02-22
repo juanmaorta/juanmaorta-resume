@@ -1,6 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
+import { PersonalDataContext, ContactDataContext, ProfessionalDataContext } from "../Context";
 import resumeFile from "../documents/resume.pdf";
 const AboutUs = ({ classicHeader, darkTheme }) => {
+  const { firstName, lastName } = useContext(PersonalDataContext);
+  const { email, city, country } = useContext(ContactDataContext);
+  const { title } = useContext(ProfessionalDataContext);
   return (
     <section id="about" className={"section " + (darkTheme ? "bg-dark-1" : "")}>
       <div className={"container " + (classicHeader ? "" : "px-lg-5")}>
@@ -33,8 +37,7 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 "text-7 fw-600 mb-3 " + (darkTheme ? "text-white" : "")
               }
             >
-              I'm <span className="text-primary">Juanma Orta,</span> a Web
-              Developer
+              I'm <span className="text-primary">{`${firstName} ${lastName}`},</span> a {title}
             </h2>
             <p className={darkTheme ? "text-white-50" : ""}>
               I help you build brand for your business at an affordable price.
@@ -59,18 +62,14 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                 }
               >
                 <li>
-                  <span className="fw-600 me-2">Name:</span>Juanma Orta
+                  <span className="fw-600 me-2">Name:</span>{`${firstName} ${lastName}`}
                 </li>
                 <li>
                   <span className="fw-600 me-2">Email:</span>
-                  <a href="mailto:chat@juanmaorta.com">chat@juanmaorta.com</a>
-                </li>
-                <li>
-                  <span className="fw-600 me-2">Age:</span>28
+                  <a href={`mailto:${email}`}>{email}</a>
                 </li>
                 <li className="border-0">
-                  <span className="fw-600 me-2">From:</span>Los Angeles,
-                  California
+                  <span className="fw-600 me-2">From:</span>{`${city} ${country}`}
                 </li>
               </ul>
               <a

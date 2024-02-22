@@ -1,9 +1,11 @@
 import React from "react";
-import { useState } from "react";
-import { Tooltip } from "./Tooltip";
 import { Link } from "react-scroll";
+import { useState, useContext } from "react";
+import { Tooltip } from "./Tooltip";
+import { PersonalDataContext } from "../Context";
 
 const ClassicHeader = ({ handleNavClick }) => {
+  const { firstName } = useContext(PersonalDataContext);
   const [stickyHeader, setStickyHeader] = useState(false);
   const [isNavModalClose, setIsNavModalClose] = useState(true);
 
@@ -44,14 +46,14 @@ const ClassicHeader = ({ handleNavClick }) => {
               style={{ cursor: "pointer" }}
               className="logo"
               to="home"
-              title="Juanma"
+              title={firstName}
               onClick={(e) => {
                 e.preventDefault();
                 setIsNavModalClose(true);
               }}
             >
               {" "}
-              <img src="images/logo-light.png" alt="Juanma" />{" "}
+              <img src="images/logo-light.png" alt={firstName} />{" "}
             </Link>
             {/* Logo End */}
           </div>
@@ -113,23 +115,6 @@ const ClassicHeader = ({ handleNavClick }) => {
                     }}
                   >
                     About
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    smooth
-                    duration={500}
-                    style={{ cursor: "pointer" }}
-                    spy
-                    activeClass="active"
-                    className="nav-link"
-                    to="services"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsNavModalClose(true);
-                    }}
-                  >
-                    What I Do
                   </Link>
                 </li>
                 <li className="nav-item">

@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PersonalDataContext } from "../Context";
 
 const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
+  const { firstName, lastName } = useContext(PersonalDataContext);
   return (
     <footer
       id="footer"
@@ -19,7 +21,7 @@ const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
                   handleNavClick("home");
                 }}
               >
-                Juanma Orta
+                {`${firstName} ${lastName}`}
               </a>
               . All Rights Reserved.
             </p>

@@ -1,11 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
+import { ContactDataContext } from "../Context";
 
 import "react-toastify/dist/ReactToastify.css";
 import { Tooltip } from "./Tooltip";
 
 const Contact = ({ classicHeader, darkTheme }) => {
+  const { email } = useContext(ContactDataContext);
   const form = useRef();
   const [sendingMail, setSendingMail] = useState(false);
 
@@ -100,7 +102,7 @@ const Contact = ({ classicHeader, darkTheme }) => {
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-envelope" />
               </span>
-              juanma.orta@protonmail.com
+              {email}
             </p>
             <h2
               className={

@@ -1,18 +1,19 @@
+import { useEffect, useState } from "react";
+
 import "./App.scss";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import AboutUs from "./components/About";
-import Services from "./components/Services";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { useEffect, useState } from "react";
 import ClassicHeader from "./components/ClassicHeader";
 import { commonConfig } from "./config/commonConfig";
 import TermsAndConditions from "./components/TermsAndConditions";
 import Disclaimer from "./components/Disclaimer";
 import PreLoader from "./components/Preloader";
 import { Tooltip } from "./components/Tooltip";
+
 
 function App() {
   const classicHeader = commonConfig.classicHeader;
@@ -77,10 +78,6 @@ function App() {
               classicHeader={classicHeader}
               darkTheme={darkTheme}
             ></AboutUs>
-            <Services
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Services>
             <Resume
               classicHeader={classicHeader}
               darkTheme={darkTheme}

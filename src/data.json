@@ -1,0 +1,81 @@
+{
+    "personal": {
+        "firstName": "Juanma",
+        "lastName": "Orta"
+    },
+    "contact": {
+        "phone": "+ 34 629 51 98 54",
+        "email": "juanma.orta@protonmail.com",
+        "city": "Barcelona",
+        "country": "Spain"
+    },
+    "professional": {
+        "title": "FrontEnd Engineer",
+        "skills": [
+          {
+            "name": "Web Design",
+            "percent": 100
+          },
+          {
+            "name": "HTML/CSS",
+            "percent": 95
+          },
+          {
+            "name": "JavaScript",
+            "percent": 100
+          },
+          {
+            "name": "React JS",
+            "percent": 100
+          },
+          {
+            "name": "Angular Js",
+            "percent": 60
+          },
+          {
+            "name": "Bootstrap",
+            "percent": 99
+          }
+        ],
+        "experience": [
+            {
+              "yearRange": "2012 - 2013",
+              "title": "Sr. UI UX Designer",
+              "place": "Themeforest",
+              "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+            },
+            {
+              "yearRange": "2014 - 2016",
+              "title": "Sr. Product Designer",
+              "place": "Dribbble",
+              "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+            },
+            {
+              "yearRange": "2017 - 2019",
+              "title": "Product Designer",
+              "place": "Adobe",
+              "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+            }
+        ],
+        "education": [
+          {
+            "yearRange": "2000 - 2004",
+            "title": "Computer Science",
+            "place": "International University",
+            "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+          },
+          {
+            "yearRange": "2005 - 2008",
+            "title": "Bachelor Degree",
+            "place": "University of California",
+            "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+          },
+          {
+            "yearRange": "2009 - 2012",
+            "title": "Master Degree",
+            "place": "Harvard University",
+            "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+          }
+      ]
+    }
+}

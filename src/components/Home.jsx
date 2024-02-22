@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Typewriter from "typewriter-effect";
+import { PersonalDataContext, ContactDataContext, ProfessionalDataContext } from "../Context";
 
 const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
+  const { firstName, lastName } = useContext(PersonalDataContext);
+  const { city, country } = useContext(ContactDataContext);
+  const { title } = useContext(ProfessionalDataContext);
+
   return (
     <section id="home">
       <div className="hero-wrap">
@@ -34,8 +39,8 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
                   <Typewriter
                     options={{
                       strings: [
-                        "I'm Juanma Orta and...",
-                        "I'm a FrontEnd Engineer",
+                        `I'm ${firstName} ${lastName} and...`,
+                        `I'm a ${title}`,
                       ],
                       autoStart: true,
                       loop: true,
@@ -43,7 +48,7 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
                   />
                 </h2>
                 <p className="text-5 text-light mb-4">
-                  based in Barcelona, Spain.
+                  based in {`${city}, ${country}`}.
                 </p>
                 <a
                   href="#contact"
