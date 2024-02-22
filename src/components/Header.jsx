@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Tooltip } from "./Tooltip";
 import { Link } from "react-scroll";
+import { PersonalDataContext } from "../Context";
+import Navigation from "./navigation/Navigation";
 
 const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
+  const { firstName, lastName } = useContext(PersonalDataContext);
   const [isNavModalClose, setIsNavModalClose] = useState(true);
   return (
     <header id="header" className="sticky-top">
@@ -25,12 +28,12 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
               <img
                 className="img-fluid rounded-pill d-block"
                 src="images/profile.jpg"
-                title="I'm Juanma"
+                title={`I'm ${firstName}`}
                 alt="profile"
               />
             </span>
             <h1 className="text-5 text-white text-center mb-0 d-lg-block">
-              Juanma Orta
+              {`${firstName} ${lastName}`}
             </h1>
           </Link>
           {/* Logo End */}
@@ -42,94 +45,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                 : "show navbar-collapse w-100 my-lg-auto"
             }
           >
-            <ul className="navbar-nav text-lg-center my-lg-auto py-lg-3">
-              <li className="nav-item">
-                <Link
-                  target={homeRef}
-                  className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="home"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="about"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
-                >
-                  About Me
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="services"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
-                >
-                  What I Do
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="resume"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
-                >
-                  Resume
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+            <Navigation homeRef={homeRef} setIsNavModalClose={setIsNavModalClose}/>
           </div>
           <ul className="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex">
             <li className="social-icons-facebook">
