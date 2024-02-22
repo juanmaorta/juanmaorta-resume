@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { useState, useContext } from "react";
-import { Tooltip } from "./Tooltip";
 import { PersonalDataContext } from "../Context";
+import Navigation from "./navigation/Navigation";
+import Social from "./social/Social";
+
 
 const ClassicHeader = ({ handleNavClick }) => {
   const { firstName } = useContext(PersonalDataContext);
@@ -82,148 +84,11 @@ const ClassicHeader = ({ handleNavClick }) => {
                   : "show navbar-collapse justify-content-center"
               }
             >
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <Link
-                    smooth
-                    duration={500}
-                    style={{ cursor: "pointer" }}
-                    spy
-                    activeClass="active"
-                    className="nav-link"
-                    to="home"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsNavModalClose(true);
-                    }}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    smooth
-                    duration={500}
-                    style={{ cursor: "pointer" }}
-                    spy
-                    activeClass="active"
-                    className="nav-link"
-                    to="about"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsNavModalClose(true);
-                    }}
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    smooth
-                    duration={500}
-                    style={{ cursor: "pointer" }}
-                    spy
-                    activeClass="active"
-                    className="nav-link"
-                    to="resume"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsNavModalClose(true);
-                    }}
-                  >
-                    Resume
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    smooth
-                    duration={500}
-                    style={{ cursor: "pointer" }}
-                    spy
-                    activeClass="active"
-                    className="nav-link"
-                    to="portfolio"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsNavModalClose(true);
-                    }}
-                  >
-                    Portfolio
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    smooth
-                    duration={500}
-                    style={{ cursor: "pointer" }}
-                    spy
-                    activeClass="active"
-                    className="nav-link"
-                    to="testimonial"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsNavModalClose(true);
-                    }}
-                  >
-                    Client
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    smooth
-                    duration={500}
-                    style={{ cursor: "pointer" }}
-                    spy
-                    activeClass="active"
-                    className="nav-link"
-                    to="contact"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsNavModalClose(true);
-                    }}
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
+              <Navigation setIsNavModalClose={setIsNavModalClose} variant="classic" />
             </div>
           </div>
           <div className="col-auto col-lg-2 d-flex justify-content-end">
-            <ul className="social-icons social-icons-light">
-              <li className="social-icons-twitter">
-                <Tooltip text="Twitter" placement="top">
-                  <a
-                    href="http://www.twitter.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-twitter" />
-                  </a>
-                </Tooltip>
-              </li>
-              <li className="social-icons-facebook">
-                <Tooltip text="Facebook" placement="top">
-                  <a
-                    href="http://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                </Tooltip>
-              </li>
-              <li className="social-icons-dribbble">
-                <Tooltip text="Dribbble" placement="top">
-                  <a
-                    href="http://www.dribbble.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-dribbble" />
-                  </a>
-                </Tooltip>
-              </li>
-            </ul>
+            <Social variant="classic"/>
           </div>
         </div>
       </nav>

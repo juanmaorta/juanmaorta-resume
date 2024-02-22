@@ -20,13 +20,28 @@ const sections = [
     },
 ];
 
-const Navigation = ({ homeRef, setIsNavModalClose }) => {
+const getListClassName = (variant) => {
+    switch(variant) {
+        case "classic":
+            return "navbar-nav text-lg-center my-lg-auto py-lg-3";
+        default:
+            return "navbar-nav";
+    }
+}
+
+const Navigation = ({ isClassic, homeRef, setIsNavModalClose, variant }) => {
+    const className = getListClassName(variant);
+
     return (
-        <ul className="navbar-nav text-lg-center my-lg-auto py-lg-3">
+        <ul className={className}>
             {sections.map(({to, title}, idx) => {
-                return <NavItem homeRef={homeRef} setIsNavModalClose={setIsNavModalClose} to={to} title={title} key={`nav_${idx}`}/>
+                return <NavItem 
+                    homeRef={homeRef} 
+                    setIsNavModalClose={setIsNavModalClose} 
+                    title={title}
+                    to={to} 
+                    key={`nav_${idx}`}/>
             })}
-            
         </ul>
         );
 }

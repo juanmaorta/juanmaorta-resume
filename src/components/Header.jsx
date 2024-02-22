@@ -33,7 +33,7 @@ const Header = ({ homeRef, handleNavClick }) => {
                 : "show navbar-collapse w-100 my-lg-auto"
             }
           >
-            <Navigation homeRef={homeRef} setIsNavModalClose={setIsNavModalClose}/>
+            <Navigation homeRef={homeRef} setIsNavModalClose={setIsNavModalClose} />
           </div>
           <Social variant="small"/>
           <button

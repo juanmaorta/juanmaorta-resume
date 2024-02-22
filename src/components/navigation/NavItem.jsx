@@ -5,13 +5,13 @@ const NavItem = ({ homeRef, setIsNavModalClose, title, to }) => {
     return (
         <li className="nav-item">
         <Link
-          target={homeRef}
-          className="nav-link "
-          smooth
-          duration={500}
-          style={{ cursor: "pointer" }}
           activeClass="active"
+          className="nav-link "
+          duration={500}
+          smooth
           spy
+          style={{ cursor: "pointer" }}
+          target={homeRef ? homeRef : ""}
           to={to}
           onClick={(e) => {
             e.preventDefault();
