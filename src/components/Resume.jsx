@@ -2,10 +2,12 @@ import React, {useContext} from "react";
 import { ProfessionalDataContext } from "../Context";
 import resumeFile from "../documents/resume.pdf";
 
+import Skills from "./Skills";
+import ResumeBlock from "./ResumeBlock";
+
 const Resume = ({ classicHeader, darkTheme }) => {
 
   const { education: educationDetails, experience: experienceDetails, skills } = useContext(ProfessionalDataContext);
-
 
   return (
     <section
@@ -36,111 +38,11 @@ const Resume = ({ classicHeader, darkTheme }) => {
         </div>
         {/* Heading end*/}
         <div className="row gx-5">
-          {/* My Education */}
-          <div className="col-md-6">
-            <h2
-              className={
-                "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
-              }
-            >
-              My Education
-            </h2>
-            {educationDetails.length > 0 &&
-              educationDetails.map((value, index) => (
-                <div
-                  key={index}
-                  className={
-                    "bg-white  rounded p-4 mb-4 " +
-                    (darkTheme ? "bg-dark" : "bg-white border")
-                  }
-                >
-                  <p className="badge bg-primary text-2 fw-400">
-                    {value.yearRange}
-                  </p>
-                  <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
-                    {value.title}
-                  </h3>
-                  <p className={darkTheme ? "text-primary" : "text-danger"}>
-                    {value.place}
-                  </p>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
-                    {value.desc}
-                  </p>
-                </div>
-              ))}
-          </div>
-          {/* My Experience */}
-          <div className="col-md-6">
-            <h2
-              className={
-                "text-6 fw-600 mb-4 " + (darkTheme ? "text-white" : "")
-              }
-            >
-              My Experience
-            </h2>
-            {experienceDetails.length > 0 &&
-              experienceDetails.map((value, index) => (
-                <div
-                  key={index}
-                  className={
-                    "bg-white  rounded p-4 mb-4 " +
-                    (darkTheme ? "bg-dark" : "bg-white border")
-                  }
-                >
-                  <p className="badge bg-primary text-2 fw-400">
-                    {value.yearRange}
-                  </p>
-                  <h3 className={"text-5 " + (darkTheme ? "text-white" : "")}>
-                    {value.title}
-                  </h3>
-                  <p className={darkTheme ? "text-primary" : "text-danger"}>
-                    {value.place}
-                  </p>
-                  <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
-                    {value.desc}
-                  </p>
-                </div>
-              ))}
-          </div>
+          <ResumeBlock title="My Experience" darkTheme={darkTheme} data={experienceDetails}/>
+          <ResumeBlock title="My Education" darkTheme={darkTheme} data={educationDetails}/>
         </div>
         {/* My Skills */}
-        <h2
-          className={
-            "text-6 fw-600 mt-4 mb-4 " + (darkTheme ? "text-white" : "")
-          }
-        >
-          My Skills
-        </h2>
-        <div className="row gx-5">
-          {skills.length > 0 &&
-            skills.map((skill, index) => (
-              <div key={index} className="col-md-6">
-                <p
-                  className={
-                    " fw-500 text-start mb-2 " +
-                    (darkTheme ? "text-light" : "text-dark")
-                  }
-                >
-                  {skill.name}{" "}
-                  <span className="float-end">{skill.percent}%</span>
-                </p>
-                <div
-                  className={
-                    "progress progress-sm mb-4 " + (darkTheme ? "bg-dark" : "")
-                  }
-                >
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: skill.percent + "%" }}
-                    aria-valuenow={skill.percent}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                  />
-                </div>
-              </div>
-            ))}
-        </div>
+        <Skills darkTheme={darkTheme} skills={skills}/>
         <div className="text-center mt-5">
           <a
             className="btn btn-outline-secondary rounded-pill shadow-none"
