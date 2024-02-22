@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-import { Tooltip } from "./Tooltip";
-import { Link } from "react-scroll";
+
 import { PersonalDataContext } from "../Context";
 import Navigation from "./navigation/Navigation";
+import Social from "./social/Social";
 
 const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
   const { firstName, lastName } = useContext(PersonalDataContext);
@@ -13,17 +13,6 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
       <nav className="primary-menu navbar navbar-expand-lg navbar-dark bg-dark border-bottom-0">
         <div className="container-fluid position-relative h-100 flex-lg-column ps-3 px-lg-3 pt-lg-3 pb-lg-2">
           {/* Logo */}
-          <Link
-            smooth
-            duration={500}
-            style={{ cursor: "pointer" }}
-            to="home"
-            className="mb-lg-auto mt-lg-4"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsNavModalClose(true);
-            }}
-          >
             <span className="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block">
               <img
                 className="img-fluid rounded-pill d-block"
@@ -35,7 +24,6 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
             <h1 className="text-5 text-white text-center mb-0 d-lg-block">
               {`${firstName} ${lastName}`}
             </h1>
-          </Link>
           {/* Logo End */}
           <div
             id="header-nav"
@@ -47,52 +35,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
           >
             <Navigation homeRef={homeRef} setIsNavModalClose={setIsNavModalClose}/>
           </div>
-          <ul className="social-icons social-icons-muted social-icons-sm mt-lg-auto ms-auto ms-lg-0 d-flex">
-            <li className="social-icons-facebook">
-              <Tooltip text="Facebook" placement="top">
-                <a
-                  href="http://www.facebook.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-facebook-f" />
-                </a>
-              </Tooltip>
-            </li>
-            <li className="social-icons-twitter">
-              <Tooltip text="Twitter" placement="top">
-                <a
-                  href="http://www.twitter.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-twitter" />
-                </a>
-              </Tooltip>
-            </li>
-            <li className="social-icons-dribbble">
-              <Tooltip text="Dribbble" placement="top">
-                <a
-                  href="http://www.dribbble.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-dribbble" />
-                </a>
-              </Tooltip>
-            </li>
-            <li className="social-icons-github">
-              <Tooltip text="Google" placement="top">
-                <a
-                  href="http://www.google.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-github" />
-                </a>
-              </Tooltip>
-            </li>
-          </ul>
+          <Social variant="small"/>
           <button
             onClick={(e) => {
               setIsNavModalClose(!isNavModalClose);

@@ -7,7 +7,27 @@
         "phone": "+ 34 629 51 98 54",
         "email": "juanma.orta@protonmail.com",
         "city": "Barcelona",
-        "country": "Spain"
+        "country": "Spain",
+        "social": [
+          {
+            "icon": "fa-linkedin",
+            "iconClass": "social-icons-linkedin",
+            "title": "LinkedIn",
+            "url": "http://www.linkedin.com/"
+          },
+          {
+            "icon": "fa-github",
+            "iconClass": "social-icons-github",
+            "title": "Github",
+            "url": "http://www.github.com/"
+          },          
+          {
+            "icon": "fa-twitter",
+            "iconClass": "social-icons-twitter",
+            "title": "Twitter",
+            "url": "http://www.twitter.com/"
+          }
+        ]
     },
     "professional": {
         "title": "FrontEnd Engineer",
