@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Typewriter from "typewriter-effect";
 import { PersonalDataContext, ContactDataContext, ProfessionalDataContext } from "../Context";
 
-const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
+const Home = ({ handleNavClick }) => {
   const { firstName, lastName } = useContext(PersonalDataContext);
   const { city, country } = useContext(ContactDataContext);
   const { title } = useContext(ProfessionalDataContext);

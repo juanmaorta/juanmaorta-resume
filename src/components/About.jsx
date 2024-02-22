@@ -1,7 +1,9 @@
 import React, {useContext} from "react";
-import { PersonalDataContext, ContactDataContext, ProfessionalDataContext } from "../Context";
+import { PersonalDataContext, ContactDataContext, ProfessionalDataContext, SiteConfigContext } from "../Context";
 import resumeFile from "../documents/resume.pdf";
-const AboutUs = ({ classicHeader, darkTheme }) => {
+const AboutUs = () => {
+  const { classicHeader, darkTheme } = useContext(SiteConfigContext);
+
   const { firstName, lastName } = useContext(PersonalDataContext);
   const { email, city, country } = useContext(ContactDataContext);
   const { title } = useContext(ProfessionalDataContext);

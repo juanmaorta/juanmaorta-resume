@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
 import "./App.scss";
 import Header from "./components/Header";
@@ -8,16 +8,16 @@ import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ClassicHeader from "./components/ClassicHeader";
-import { commonConfig } from "./config/commonConfig";
 import TermsAndConditions from "./components/TermsAndConditions";
 import Disclaimer from "./components/Disclaimer";
 import PreLoader from "./components/Preloader";
 import { Tooltip } from "./components/Tooltip";
+import { SiteConfigContext } from "./Context";
 
 
 function App() {
-  const classicHeader = commonConfig.classicHeader;
-  const darkTheme = commonConfig.darkTheme;
+  const { classicHeader } = useContext(SiteConfigContext);
+
 
   const handleNavClick = (section) => {
     document.getElementById(section).scrollIntoView({ behavior: "smooth" });
@@ -70,26 +70,13 @@ function App() {
 
           <div id="content" role="main">
             <Home
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
               handleNavClick={handleNavClick}
             ></Home>
-            <AboutUs
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></AboutUs>
-            <Resume
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Resume>
-            <Contact
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Contact>
+            <AboutUs />
+            <Resume />
+            <Contact />
           </div>
           <Footer
-            classicHeader={classicHeader}
-            darkTheme={darkTheme}
             handleNavClick={handleNavClick}
           ></Footer>
         </div>
@@ -107,8 +94,8 @@ function App() {
           </span>
         </Tooltip>
 
-        <TermsAndConditions darkTheme={darkTheme}></TermsAndConditions>
-        <Disclaimer darkTheme={darkTheme}></Disclaimer>
+        <TermsAndConditions />
+        <Disclaimer />
       </div>
     </>
   );

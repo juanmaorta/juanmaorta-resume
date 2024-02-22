@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SiteConfigContext } from "../Context";
 
-const Skills = ({darkTheme, skills}) => {
+const Skills = ({ skills }) => {
+    const { darkTheme } = useContext(SiteConfigContext);
+    
     return (
         <>
         <h2

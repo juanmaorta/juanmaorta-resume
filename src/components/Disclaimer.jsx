@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SiteConfigContext } from "../Context";
 
-const Disclaimer = ({ darkTheme }) => {
+const Disclaimer = () => {
+  const { darkTheme } = useContext(SiteConfigContext);
   return (
     <div
       id="disclaimer"

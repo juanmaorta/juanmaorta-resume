@@ -4,7 +4,7 @@ import { PersonalDataContext } from "../Context";
 import Navigation from "./navigation/Navigation";
 import Social from "./social/Social";
 
-const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
+const Header = ({ homeRef, handleNavClick }) => {
   const { firstName, lastName } = useContext(PersonalDataContext);
   const [isNavModalClose, setIsNavModalClose] = useState(true);
   return (

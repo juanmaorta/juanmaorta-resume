@@ -1,11 +1,12 @@
 import React, {useContext} from "react";
-import { ProfessionalDataContext } from "../Context";
+import { ProfessionalDataContext, SiteConfigContext } from "../Context";
 import resumeFile from "../documents/resume.pdf";
 
 import Skills from "./Skills";
 import ResumeBlock from "./ResumeBlock";
 
-const Resume = ({ classicHeader, darkTheme }) => {
+const Resume = () => {
+  const { classicHeader, darkTheme } = useContext(SiteConfigContext);
 
   const { education: educationDetails, experience: experienceDetails, skills } = useContext(ProfessionalDataContext);
 
@@ -38,11 +39,11 @@ const Resume = ({ classicHeader, darkTheme }) => {
         </div>
         {/* Heading end*/}
         <div className="row gx-5">
-          <ResumeBlock title="My Experience" darkTheme={darkTheme} data={experienceDetails}/>
-          <ResumeBlock title="My Education" darkTheme={darkTheme} data={educationDetails}/>
+          <ResumeBlock title="My Experience" data={experienceDetails}/>
+          <ResumeBlock title="My Education" data={educationDetails}/>
         </div>
         {/* My Skills */}
-        <Skills darkTheme={darkTheme} skills={skills}/>
+        <Skills skills={skills}/>
         <div className="text-center mt-5">
           <a
             className="btn btn-outline-secondary rounded-pill shadow-none"

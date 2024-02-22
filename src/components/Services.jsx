@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SiteConfigContext } from "../Context";
 
-const Services = ({ classicHeader, darkTheme }) => {
+const Services = () => {
+  const { classicHeader, darkTheme } = useContext(SiteConfigContext);
   // services details
   const services = [
     {

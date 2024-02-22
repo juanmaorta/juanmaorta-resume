@@ -1,12 +1,13 @@
 import React, { useRef, useState, useContext } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
-import { ContactDataContext } from "../Context";
+import { ContactDataContext, SiteConfigContext } from "../Context";
 
 import "react-toastify/dist/ReactToastify.css";
 import Social from "./social/Social";
 
-const Contact = ({ classicHeader, darkTheme }) => {
+const Contact = () => {
+  const { classicHeader, darkTheme } = useContext(SiteConfigContext);
   const { email } = useContext(ContactDataContext);
   const form = useRef();
   const [sendingMail, setSendingMail] = useState(false);

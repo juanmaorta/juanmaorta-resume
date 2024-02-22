@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
-import { PersonalDataContext } from "../Context";
+import { PersonalDataContext, SiteConfigContext } from "../Context";
 
-const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
+const Footer = ({ handleNavClick }) => {
+  const { classicHeader, darkTheme } = useContext(SiteConfigContext);
+  
   const { firstName, lastName } = useContext(PersonalDataContext);
   return (
     <footer
