@@ -32,6 +32,7 @@ const Home = ({ handleNavClick }) => {
 
         <div className="hero-content section d-flex min-vh-100">
           <div className="container my-auto">
+            <div>hello</div>
             <div className="row">
               <div className="col-12 text-center">
                 <p className="text-7 fw-500 text-white mb-2 mb-md-3">Hello!</p>
