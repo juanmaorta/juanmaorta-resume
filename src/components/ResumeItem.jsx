@@ -4,6 +4,8 @@ import { SiteConfigContext } from "../Context";
 const ResumeItem = ({index, title, place, yearRange, desc}) => {
   const { darkTheme } = useContext(SiteConfigContext);
 
+  console.log(desc);
+
   return (
       <div
       key={index}
@@ -22,7 +24,11 @@ const ResumeItem = ({index, title, place, yearRange, desc}) => {
         {place}
       </p>
       <p className={"mb-0 " + (darkTheme ? "text-white-50" : "")}>
-        {desc}
+        <ul>
+          {desc.map((item) => {
+            return <li>{item}</li>;
+          })}
+        </ul>
       </p>
     </div>
   );

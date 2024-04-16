@@ -59,42 +59,64 @@
         ],
         "experience": [
             {
-              "yearRange": "2012 - 2013",
-              "title": "Sr. UI UX Designer",
-              "place": "Themeforest",
-              "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+              "yearRange": "2019 - 2023",
+              "title": "Frontend Developer",
+              "place": "Auvik Networks Inc.",
+              "desc": [
+                "Optimized the company's UI library within 12 months, leading to an improvement in user satisfaction",
+                "Implemented a E2E testing platform (Puppeteer), leading to a 15% reduction in post-release issues and ensuring a more robust and reliable software product.",
+                "Worked together with the product development and UX teams, providing constructive feedback to enhance code quality and efficiency"
+              ]
             },
             {
-              "yearRange": "2014 - 2016",
-              "title": "Sr. Product Designer",
-              "place": "Dribbble",
-              "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+              "yearRange": "2014 - 2018",
+              "title": "Senior Frontend Developer",
+              "place": "Ulabox",
+              "desc": [
+                "Utilized modern front-end frameworks, particularly ReactJS, to enhance user experiences.",
+                "Streamlined web optimizations to achieve faster load times and scalable functionality, enhancing the efficiency of conversion funnels."
+              ]
             },
             {
-              "yearRange": "2017 - 2019",
-              "title": "Product Designer",
-              "place": "Adobe",
-              "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+              "yearRange": "2018 - 2021",
+              "title": "Frontend Engineer and Coach",
+              "place": "Lean Js",
+              "desc": [
+                "Conducted workshops on ReactJS and JavaScript, teaching assistants and significantly enhancing issue resolution efficiency and code quality.",
+                "Enhanced code quality offering constructive feedback on React code reviews, improving maintainability and adherence to coding standards and best practice."
+              ]
+            },
+            {
+              "yearRange": "2001 - 2020",
+              "title": "Cto & Co Founder",
+              "place": "Fotonatura.org",
+              "desc": [
+                "Implemented LAMP stack, resulting in 1 million monthly visits and improved user experience. Relational databases included MySQL and PostgreSQL.",
+                "Collaborated with product manager to accurately render complex data, resulting in highly performant user interfaces and a 30% increase in average session duration."
+              ]
+            },
+            {
+              "yearRange": "2006 - 2014",
+              "title": "Founder & Main Developer",
+              "place": "Portafolionline.com",
+              "desc": [
+                "Orchestrated the creation and deployment of a dynamic platform, seamlessly integrating PHP, MySQL, jQuery, and Bootstrap for comprehensive functionality and design.",
+                "Engineered a scalable architecture to support platform growth, optimizing performance across diverse functionalities."
+              ]
             }
         ],
         "education": [
           {
-            "yearRange": "2000 - 2004",
-            "title": "Computer Science",
-            "place": "International University",
-            "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+            "yearRange": "2005 - 2006",
+            "title": "Master In Software Engineering",
+            "place": "Universitat Oberta De Catalunya",
+            "desc": []
           },
           {
-            "yearRange": "2005 - 2008",
-            "title": "Bachelor Degree",
-            "place": "University of California",
-            "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
-          },
-          {
-            "yearRange": "2009 - 2012",
-            "title": "Master Degree",
-            "place": "Harvard University",
-            "desc": "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+            "yearRange": "1988 - 1993",
+            "title": "Degree in Sciences (Biology)",
+            "place": "Universitat Autònoma De Barcelona",
+            "desc": []
           }
       ]
     }
