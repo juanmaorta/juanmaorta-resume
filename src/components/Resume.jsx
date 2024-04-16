@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import { ProfessionalDataContext, SiteConfigContext } from "../Context";
-import resumeFile from "../documents/resume.pdf";
+import resumeFile from "../documents/juanma-orta-frontend-engineer.pdf";
 
 import Skills from "./Skills";
 import ResumeBlock from "./ResumeBlock";

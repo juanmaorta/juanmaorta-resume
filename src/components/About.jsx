@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import { PersonalDataContext, ContactDataContext, ProfessionalDataContext, SiteConfigContext } from "../Context";
-import resumeFile from "../documents/resume.pdf";
+import resumeFile from "../documents/juanma-orta-frontend-engineer.pdf";
 const AboutUs = () => {
   const { classicHeader, darkTheme } = useContext(SiteConfigContext);
 
@@ -42,15 +42,7 @@ const AboutUs = () => {
               I'm <span className="text-primary">{`${firstName} ${lastName}`},</span> a {title}
             </h2>
             <p className={darkTheme ? "text-white-50" : ""}>
-              I help you build brand for your business at an affordable price.
-              Thousands of clients have procured exceptional results while
-              working with our dedicated team. when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book.
-            </p>
-            <p className={darkTheme ? "text-white-50" : ""}>
-              Delivering work within time and budget which meets client’s
-              requirements is our moto. Lorem Ipsum has been the industry's
-              standard dummy text ever when an unknown printer took a galley.
+              I am a Senior Frontend Developer with strong backend skills and a keen interest in new technologies. I am proficient in JavaScript, especially TypeScript, ReactJS, jQuery, and CSS for frontend development. I demonstrate expertise in JavaScript best practices and tooling, utilizing ESLint, Webpack, and possess knowledge of CI/CD pipelines for seamless integration and deployment workflows.
             </p>
           </div>
           {/* About me content end */}
@@ -93,66 +85,6 @@ const AboutUs = () => {
           }
         >
           <div className="row">
-            <div className="col-6 col-md-3">
-              <div className="featured-box text-center">
-                <h4
-                  className={
-                    "text-12  mb-0 " +
-                    (darkTheme ? "text-white-50" : "text-muted")
-                  }
-                >
-                  <span>10</span>+
-                </h4>
-                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Years Experiance
-                </p>
-              </div>
-            </div>
-            <div className="col-6 col-md-3">
-              <div className="featured-box text-center">
-                <h4
-                  className={
-                    "text-12  mb-0 " +
-                    (darkTheme ? "text-white-50" : "text-muted")
-                  }
-                >
-                  <span>250</span>+
-                </h4>
-                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Happy Clients
-                </p>
-              </div>
-            </div>
-            <div className="col-6 col-md-3">
-              <div className="featured-box text-center">
-                <h4
-                  className={
-                    "text-12  mb-0 " +
-                    (darkTheme ? "text-white-50" : "text-muted")
-                  }
-                >
-                  <span>650</span>+
-                </h4>
-                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Projects Done
-                </p>
-              </div>
-            </div>
-            <div className="col-6 col-md-3">
-              <div className="featured-box text-center">
-                <h4
-                  className={
-                    "text-12  mb-0 " +
-                    (darkTheme ? "text-white-50" : "text-muted")
-                  }
-                >
-                  <span>38</span>
-                </h4>
-                <p className={"mb-0 " + (darkTheme ? "text-light" : "")}>
-                  Get Awards
-                </p>
-              </div>
-            </div>
           </div>
         </div>
         {/* projects rewards counting end */}
